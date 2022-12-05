@@ -1,6 +1,5 @@
 {
   "resourceType": "Patient",
-  "id": "pat4",
   "text": {
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t<p>Ein typischer Oesterreicher*in</p>\n\t\t</div>"
