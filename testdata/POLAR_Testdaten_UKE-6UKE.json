@@ -1,0 +1,3901 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/Encounter/Abteilungsfall"
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "system": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Abteilungsfallklasse",
+          "code": "ub"
+        },
+        "serviceType": {
+          "coding": [
+            {
+              "system": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/Fachabteilungsschluessel",
+              "code": "0100",
+              "display": "Innere Medizin"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "partOf": {
+          "reference": "Encounter/6UKEE-1"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "6UKE-C-2140350379",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "6UKE-C-2140350379"
+          }
+        ],
+        "category": [
+          {
+            "text": "Aufnahmediagnose"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+              "version": "2020",
+              "code": "I50.12"
+            }
+          ],
+          "text": "Linksherzinsuffizienz"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "recordedDate": "2020-02-21T00:00:00+01:00"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/6UKE-C-2140350379"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "6UKE-M--132846039",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "6UKE-M--132846039"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/ifa/pzn",
+              "code": "05013266",
+              "userSelected": false
+            },
+            {
+              "system": "http://fhir.de/CodeSystem/dimdi/atc",
+              "code": "B01AB05",
+              "userSelected": false
+            }
+          ],
+          "text": "Enoxaparin natrium"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.de/CodeSystem/ask",
+                  "display": "no code defined"
+                }
+              ]
+            },
+            "strength": {
+              "numerator": {
+                "value": 20,
+                "unit": "mg",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg"
+              },
+              "denominator": {
+                "value": 1,
+                "system": "http://XXX",
+                "code": "Fertigspritzen"
+              }
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Medication/6UKE-M--132846039"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--132846039"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Fertigspritzen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "6UKE-M--1019395450",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "6UKE-M--1019395450"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/ifa/pzn",
+              "code": "11357188",
+              "userSelected": false
+            },
+            {
+              "system": "http://fhir.de/CodeSystem/dimdi/atc",
+              "code": "A02BC02",
+              "userSelected": false
+            }
+          ],
+          "text": "Pantoprazol"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.de/CodeSystem/ask",
+                  "display": "no code defined"
+                }
+              ]
+            },
+            "strength": {
+              "numerator": {
+                "value": 40,
+                "unit": "mg",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg"
+              },
+              "denominator": {
+                "value": 1,
+                "system": "http://XXX",
+                "code": "Tabletten"
+              }
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Medication/6UKE-M--1019395450"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--1019395450"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "6UKE-M-899054828",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "6UKE-M-899054828"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/ifa/pzn",
+              "code": "02532735",
+              "userSelected": false
+            },
+            {
+              "system": "http://fhir.de/CodeSystem/dimdi/atc",
+              "code": "H03AA01",
+              "userSelected": false
+            }
+          ],
+          "text": "L-Thyroxin"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.de/CodeSystem/ask",
+                  "display": "no code defined"
+                }
+              ]
+            },
+            "strength": {
+              "numerator": {
+                "value": 75,
+                "unit": "µg",
+                "system": "http://unitsofmeasure.org",
+                "code": "µg"
+              },
+              "denominator": {
+                "value": 1,
+                "system": "http://XXX",
+                "code": "Tabletten"
+              }
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Medication/6UKE-M-899054828"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-899054828"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "6UKE-M-761180906",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "6UKE-M-761180906"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/ifa/pzn",
+              "code": "07018581",
+              "userSelected": false
+            },
+            {
+              "system": "http://fhir.de/CodeSystem/dimdi/atc",
+              "code": "C08CA01",
+              "userSelected": false
+            }
+          ],
+          "text": "Amlodipin"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.de/CodeSystem/ask",
+                  "display": "no code defined"
+                }
+              ]
+            },
+            "strength": {
+              "numerator": {
+                "value": 5,
+                "unit": "mg",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg"
+              },
+              "denominator": {
+                "value": 1,
+                "system": "http://XXX",
+                "code": "Tabletten"
+              }
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Medication/6UKE-M-761180906"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-761180906"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "6UKE-M-762044849",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "6UKE-M-762044849"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/ifa/pzn",
+              "code": "05905964",
+              "userSelected": false
+            },
+            {
+              "system": "http://fhir.de/CodeSystem/dimdi/atc",
+              "code": "C09AA05",
+              "userSelected": false
+            }
+          ],
+          "text": "Ramipril"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.de/CodeSystem/ask",
+                  "display": "no code defined"
+                }
+              ]
+            },
+            "strength": {
+              "numerator": {
+                "value": 5,
+                "unit": "mg",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg"
+              },
+              "denominator": {
+                "value": 1,
+                "system": "http://XXX",
+                "code": "Tabletten"
+              }
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Medication/6UKE-M-762044849"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-762044849"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "6UKE-M-756563304",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "6UKE-M-756563304"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/ifa/pzn",
+              "code": "06564548",
+              "userSelected": false
+            },
+            {
+              "system": "http://fhir.de/CodeSystem/dimdi/atc",
+              "code": "C03CA04",
+              "userSelected": false
+            }
+          ],
+          "text": "Torasemid"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.de/CodeSystem/ask",
+                  "display": "no code defined"
+                }
+              ]
+            },
+            "strength": {
+              "numerator": {
+                "value": 10,
+                "unit": "mg",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg"
+              },
+              "denominator": {
+                "value": 1,
+                "system": "http://XXX",
+                "code": "Tabletten"
+              }
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Medication/6UKE-M-756563304"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-756563304"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "6UKE-M--990768222",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "6UKE-M--990768222"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/ifa/pzn",
+              "code": "02758209",
+              "userSelected": false
+            },
+            {
+              "system": "http://fhir.de/CodeSystem/dimdi/atc",
+              "code": "A12BA01",
+              "userSelected": false
+            }
+          ],
+          "text": "Kalium chlorid"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.de/CodeSystem/ask",
+                  "display": "no code defined"
+                }
+              ]
+            },
+            "strength": {
+              "numerator": {
+                "value": 600,
+                "unit": "mg",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg"
+              },
+              "denominator": {
+                "value": 1,
+                "system": "http://XXX",
+                "code": "Brausetabletten"
+              }
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Medication/6UKE-M--990768222"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--990768222"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Brausetabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "6UKE-M--130969210",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "6UKE-M--130969210"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/ifa/pzn",
+              "code": "07712844",
+              "userSelected": false
+            },
+            {
+              "system": "http://fhir.de/CodeSystem/dimdi/atc",
+              "code": "B03BB01",
+              "userSelected": false
+            }
+          ],
+          "text": "Folsäure"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.de/CodeSystem/ask",
+                  "display": "no code defined"
+                }
+              ]
+            },
+            "strength": {
+              "numerator": {
+                "value": 5,
+                "unit": "mg",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg"
+              },
+              "denominator": {
+                "value": 1,
+                "system": "http://XXX",
+                "code": "Tabletten"
+              }
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Medication/6UKE-M--130969210"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--130969210"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "6UKE-M--992615263",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "6UKE-M--992615263"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/ifa/pzn",
+              "code": "02386423",
+              "userSelected": false
+            },
+            {
+              "system": "http://fhir.de/CodeSystem/dimdi/atc",
+              "code": "A10BA02",
+              "userSelected": false
+            }
+          ],
+          "text": "Metformin hydrochlorid"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.de/CodeSystem/ask",
+                  "display": "no code defined"
+                }
+              ]
+            },
+            "strength": {
+              "numerator": {
+                "value": 500,
+                "unit": "mg",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg"
+              },
+              "denominator": {
+                "value": 1,
+                "system": "http://XXX",
+                "code": "Tabletten"
+              }
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Medication/6UKE-M--992615263"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--992615263"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "6UKE-M--990736479",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "6UKE-M--990736479"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/ifa/pzn",
+              "code": "07606088",
+              "userSelected": false
+            },
+            {
+              "system": "http://fhir.de/CodeSystem/dimdi/atc",
+              "code": "A12CC10",
+              "userSelected": false
+            }
+          ],
+          "text": "Magnesium oxid"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.de/CodeSystem/ask",
+                  "display": "no code defined"
+                }
+              ]
+            },
+            "strength": {
+              "numerator": {
+                "value": 250,
+                "unit": "mg",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg"
+              },
+              "denominator": {
+                "value": 1,
+                "system": "http://XXX",
+                "code": "Tabletten"
+              }
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Medication/6UKE-M--990736479"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--990736479"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "6UKE-M-1931021047",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "6UKE-M-1931021047"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/ifa/pzn",
+              "code": "00574592",
+              "userSelected": false
+            },
+            {
+              "system": "http://fhir.de/CodeSystem/dimdi/atc",
+              "code": "N05CF01",
+              "userSelected": false
+            }
+          ],
+          "text": "Zopiclon"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.de/CodeSystem/ask",
+                  "display": "no code defined"
+                }
+              ]
+            },
+            "strength": {
+              "numerator": {
+                "value": 7.5,
+                "unit": "mg",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg"
+              },
+              "denominator": {
+                "value": 1,
+                "system": "http://XXX",
+                "code": "Tabletten"
+              }
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Medication/6UKE-M-1931021047"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-1931021047"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "6UKE-M--129122136",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "6UKE-M--129122136"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/ifa/pzn",
+              "code": "00731502",
+              "userSelected": false
+            },
+            {
+              "system": "http://fhir.de/CodeSystem/dimdi/atc",
+              "code": "B05BB12",
+              "userSelected": false
+            }
+          ],
+          "text": "Ringer Lösung"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.de/CodeSystem/ask",
+                  "display": "no code defined"
+                }
+              ]
+            },
+            "strength": {
+              "numerator": {
+                "value": 1000,
+                "unit": "ml",
+                "system": "http://unitsofmeasure.org",
+                "code": "ml"
+              },
+              "denominator": {
+                "value": 1,
+                "system": "http://XXX",
+                "code": "Infusionsflaschen"
+              }
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Medication/6UKE-M--129122136"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--129122136"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Infusionsflaschen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--132846039"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Fertigspritzen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--1019395450"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-899054828"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-761180906"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-762044849"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-756563304"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--990768222"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Brausetabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--130969210"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--992615263"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--990736479"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-1931021047"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--129122136"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Infusionsflaschen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--132846039"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Fertigspritzen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--1019395450"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-899054828"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-761180906"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-762044849"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-756563304"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--990768222"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Brausetabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--130969210"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--992615263"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--990736479"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-1931021047"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--129122136"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Infusionsflaschen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--132846039"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Fertigspritzen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--1019395450"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-899054828"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-761180906"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-762044849"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-756563304"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--990768222"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Brausetabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--130969210"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--992615263"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--990736479"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-1931021047"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--129122136"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Infusionsflaschen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--132846039"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Fertigspritzen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--1019395450"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-899054828"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-761180906"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-762044849"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-756563304"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--990768222"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Brausetabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--130969210"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--992615263"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--990736479"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-1931021047"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--129122136"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Infusionsflaschen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--132846039"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Fertigspritzen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--1019395450"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-899054828"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-761180906"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-762044849"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-756563304"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--990768222"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Brausetabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--130969210"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--992615263"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--990736479"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-1931021047"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--129122136"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Infusionsflaschen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--132846039"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Fertigspritzen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--1019395450"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-899054828"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-761180906"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-762044849"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-756563304"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--990768222"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Brausetabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--130969210"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--992615263"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--990736479"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M-1931021047"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/6UKE-M--129122136"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "context": {
+          "reference": "Encounter/6UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Infusionsflaschen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "6UKE",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "6UKE"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "i",
+            "given": [
+              "f"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1952-01-01"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/6UKE"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "6UKEE-1",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/Encounter/Versorgungsfall"
+          ]
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "VN"
+                }
+              ]
+            },
+            "system": "Generated",
+            "value": "6UKEE-1",
+            "assigner": {
+              "identifier": {
+                "system": "https://www.medizininformatik-initiative.de/fhir/core/NamingSystem/org-identifier",
+                "value": "UKE"
+              }
+            }
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Versorgungsfallklasse",
+          "code": "stationaer"
+        },
+        "subject": {
+          "reference": "Patient/6UKE"
+        },
+        "period": {
+          "start": "2020-02-21T00:00:00+01:00",
+          "end": "2020-02-27T00:00:00+01:00"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/6UKEE-1"
+      }
+    }
+  ]
+}

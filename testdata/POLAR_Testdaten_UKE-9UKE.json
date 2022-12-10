@@ -1,0 +1,3281 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/Encounter/Abteilungsfall"
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "system": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Abteilungsfallklasse",
+          "code": "ub"
+        },
+        "serviceType": {
+          "coding": [
+            {
+              "system": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/Fachabteilungsschluessel",
+              "code": "0700",
+              "display": "Gastroenterologie"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "period": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "partOf": {
+          "reference": "Encounter/9UKEE-1"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "9UKE-C-65416746",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "9UKE-C-65416746"
+          }
+        ],
+        "category": [
+          {
+            "text": "Aufnahmediagnose"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+              "version": "2020",
+              "code": "E78.2"
+            }
+          ],
+          "text": "gemischte Hyperlipidämie"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "recordedDate": "2020-02-05T00:00:00+01:00"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/9UKE-C-65416746"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9UKE-M--132846039",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "9UKE-M--132846039"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/ifa/pzn",
+              "code": "05013355",
+              "userSelected": false
+            },
+            {
+              "system": "http://fhir.de/CodeSystem/dimdi/atc",
+              "code": "B01AB05",
+              "userSelected": false
+            }
+          ],
+          "text": "Enoxaparin natrium"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.de/CodeSystem/ask",
+                  "display": "no code defined"
+                }
+              ]
+            },
+            "strength": {
+              "numerator": {
+                "value": 40,
+                "unit": "mg",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg"
+              },
+              "denominator": {
+                "value": 1,
+                "system": "http://XXX",
+                "code": "Fertigspritzen"
+              }
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Medication/9UKE-M--132846039"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--132846039"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Fertigspritzen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9UKE-M--1619057103",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "9UKE-M--1619057103"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/ifa/pzn",
+              "code": "04887721",
+              "userSelected": false
+            },
+            {
+              "system": "http://fhir.de/CodeSystem/dimdi/atc",
+              "code": "J05AB01",
+              "userSelected": false
+            }
+          ],
+          "text": "Aciclovir"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.de/CodeSystem/ask",
+                  "display": "no code defined"
+                }
+              ]
+            },
+            "strength": {
+              "numerator": {
+                "value": 400,
+                "unit": "mg",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg"
+              },
+              "denominator": {
+                "value": 1,
+                "system": "http://XXX",
+                "code": "Tabletten"
+              }
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Medication/9UKE-M--1619057103"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1619057103"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9UKE-M--1622394655",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "9UKE-M--1622394655"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/ifa/pzn",
+              "code": "02142046",
+              "userSelected": false
+            },
+            {
+              "system": "http://fhir.de/CodeSystem/dimdi/atc",
+              "code": "J01MA02",
+              "userSelected": false
+            }
+          ],
+          "text": "Ciprofloxacin"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.de/CodeSystem/ask",
+                  "display": "no code defined"
+                }
+              ]
+            },
+            "strength": {
+              "numerator": {
+                "value": 500,
+                "unit": "mg",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg"
+              },
+              "denominator": {
+                "value": 1,
+                "system": "http://XXX",
+                "code": "Tabletten"
+              }
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Medication/9UKE-M--1622394655"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1622394655"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9UKE-M--1622629140",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "9UKE-M--1622629140"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/ifa/pzn",
+              "code": "03758559",
+              "userSelected": false
+            },
+            {
+              "system": "http://fhir.de/CodeSystem/dimdi/atc",
+              "code": "J01EE01",
+              "userSelected": false
+            }
+          ],
+          "text": "Cotrimoxazol"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.de/CodeSystem/ask",
+                  "display": "no code defined"
+                }
+              ]
+            },
+            "strength": {
+              "numerator": {
+                "value": 960,
+                "unit": "mg",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg"
+              },
+              "denominator": {
+                "value": 1,
+                "system": "http://XXX",
+                "code": "Tabletten"
+              }
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Medication/9UKE-M--1622629140"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1622629140"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9UKE-M-1930959545",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "9UKE-M-1930959545"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/ifa/pzn",
+              "code": "08770387",
+              "userSelected": false
+            },
+            {
+              "system": "http://fhir.de/CodeSystem/dimdi/atc",
+              "code": "N05AD03",
+              "userSelected": false
+            }
+          ],
+          "text": "Melperon hydrochlorid"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.de/CodeSystem/ask",
+                  "display": "no code defined"
+                }
+              ]
+            },
+            "strength": {
+              "numerator": {
+                "value": 25,
+                "unit": "mg/5ml",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg/5ml"
+              },
+              "denominator": {
+                "value": 1,
+                "system": "http://XXX",
+                "code": "Lösung zum Einnehmen"
+              }
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Medication/9UKE-M-1930959545"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-1930959545"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Lösung zum Einnehmen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9UKE-M-1929131753",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "9UKE-M-1929131753"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/ifa/pzn",
+              "code": "07153907",
+              "userSelected": false
+            },
+            {
+              "system": "http://fhir.de/CodeSystem/dimdi/atc",
+              "code": "N03AX12",
+              "userSelected": false
+            }
+          ],
+          "text": "Gabapentin"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.de/CodeSystem/ask",
+                  "display": "no code defined"
+                }
+              ]
+            },
+            "strength": {
+              "numerator": {
+                "value": 100,
+                "unit": "mg",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg"
+              },
+              "denominator": {
+                "value": 1,
+                "system": "http://XXX",
+                "code": "Tabletten"
+              }
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Medication/9UKE-M-1929131753"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-1929131753"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 4,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9UKE-M-1928216850",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "9UKE-M-1928216850"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/ifa/pzn",
+              "code": "06882768",
+              "userSelected": false
+            },
+            {
+              "system": "http://fhir.de/CodeSystem/dimdi/atc",
+              "code": "N02BB02",
+              "userSelected": false
+            }
+          ],
+          "text": "Metamizol natrium-1-wasser"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.de/CodeSystem/ask",
+                  "display": "no code defined"
+                }
+              ]
+            },
+            "strength": {
+              "numerator": {
+                "value": 1000,
+                "unit": "mg",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg"
+              },
+              "denominator": {
+                "value": 1,
+                "system": "http://XXX",
+                "code": "Injektionslösung"
+              }
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Medication/9UKE-M-1928216850"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-1928216850"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 4,
+            "unit": "Injektionslösung",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9UKE-M--1019395450",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "9UKE-M--1019395450"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/ifa/pzn",
+              "code": "11357188",
+              "userSelected": false
+            },
+            {
+              "system": "http://fhir.de/CodeSystem/dimdi/atc",
+              "code": "A02BC02",
+              "userSelected": false
+            }
+          ],
+          "text": "Pantoprazol"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.de/CodeSystem/ask",
+                  "display": "no code defined"
+                }
+              ]
+            },
+            "strength": {
+              "numerator": {
+                "value": 40,
+                "unit": "mg",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg"
+              },
+              "denominator": {
+                "value": 1,
+                "system": "http://XXX",
+                "code": "Tabletten"
+              }
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Medication/9UKE-M--1019395450"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1019395450"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9UKE-M--1621826702",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "9UKE-M--1621826702"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/ifa/pzn",
+              "code": "15582953",
+              "userSelected": false
+            },
+            {
+              "system": "http://fhir.de/CodeSystem/dimdi/atc",
+              "code": "J02AC04",
+              "userSelected": false
+            }
+          ],
+          "text": "Posaconazol"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.de/CodeSystem/ask",
+                  "display": "no code defined"
+                }
+              ]
+            },
+            "strength": {
+              "numerator": {
+                "value": 100,
+                "unit": "mg",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg"
+              },
+              "denominator": {
+                "value": 1,
+                "system": "http://XXX",
+                "code": "Tabletten"
+              }
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Medication/9UKE-M--1621826702"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1621826702"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 3,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9UKE-M-155047881",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "9UKE-M-155047881"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/ifa/pzn",
+              "code": "01223216",
+              "userSelected": false
+            },
+            {
+              "system": "http://fhir.de/CodeSystem/dimdi/atc",
+              "code": "L04AX02",
+              "userSelected": false
+            }
+          ],
+          "text": "Thalidomid"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.de/CodeSystem/ask",
+                  "display": "no code defined"
+                }
+              ]
+            },
+            "strength": {
+              "numerator": {
+                "value": 50,
+                "unit": "mg",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg"
+              },
+              "denominator": {
+                "value": 1,
+                "system": "http://XXX",
+                "code": "Tabletten"
+              }
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Medication/9UKE-M-155047881"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-155047881"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--132846039"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Fertigspritzen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1619057103"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1622394655"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1622629140"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-1930959545"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Lösung zum Einnehmen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-1929131753"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 4,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-1928216850"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 4,
+            "unit": "Injektionslösung",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1019395450"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1621826702"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 3,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-155047881"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--132846039"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Fertigspritzen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1619057103"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1622394655"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1622629140"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-1930959545"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Lösung zum Einnehmen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-1929131753"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 4,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-1928216850"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 4,
+            "unit": "Injektionslösung",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1019395450"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1621826702"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 3,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-155047881"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--132846039"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Fertigspritzen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1619057103"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1622394655"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1622629140"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-1930959545"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Lösung zum Einnehmen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-1929131753"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 4,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-1928216850"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 4,
+            "unit": "Injektionslösung",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1019395450"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1621826702"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 3,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-155047881"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--132846039"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Fertigspritzen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1619057103"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1622394655"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1622629140"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-1930959545"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Lösung zum Einnehmen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-1929131753"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 4,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-1928216850"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 4,
+            "unit": "Injektionslösung",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1019395450"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1621826702"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 3,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-155047881"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--132846039"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Fertigspritzen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1619057103"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1622394655"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1622629140"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-1930959545"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Lösung zum Einnehmen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-1929131753"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 4,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-1928216850"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 4,
+            "unit": "Injektionslösung",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1019395450"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1621826702"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 3,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-155047881"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--132846039"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Fertigspritzen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1619057103"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1622394655"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1622629140"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-1930959545"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Lösung zum Einnehmen",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-1929131753"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 4,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-1928216850"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 4,
+            "unit": "Injektionslösung",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1019395450"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M--1621826702"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 3,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/9UKE-M-155047881"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "context": {
+          "reference": "Encounter/9UKEE-1"
+        },
+        "effectivePeriod": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        },
+        "dosage": {
+          "dose": {
+            "value": 2,
+            "unit": "Tabletten",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationAdministration"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "9UKE",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient"
+          ]
+        },
+        "identifier": [
+          {
+            "value": "9UKE"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "p",
+            "given": [
+              "j"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1954-01-01"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/9UKE"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "9UKEE-1",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/Encounter/Versorgungsfall"
+          ]
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "VN"
+                }
+              ]
+            },
+            "system": "Generated",
+            "value": "9UKEE-1",
+            "assigner": {
+              "identifier": {
+                "system": "https://www.medizininformatik-initiative.de/fhir/core/NamingSystem/org-identifier",
+                "value": "UKE"
+              }
+            }
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Versorgungsfallklasse",
+          "code": "stationaer"
+        },
+        "subject": {
+          "reference": "Patient/9UKE"
+        },
+        "period": {
+          "start": "2020-02-05T00:00:00+01:00",
+          "end": "2020-02-11T00:00:00+01:00"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/9UKEE-1"
+      }
+    }
+  ]
+}
