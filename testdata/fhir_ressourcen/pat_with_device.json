@@ -1,0 +1,17 @@
+{
+  "resourceType": "Patient",
+  "id": "example-patient",
+  "name": [
+    {
+      "family": "Mustermann",
+      "given": ["Max"]
+    }
+  ],
+  "link": [
+    {
+      "other": {
+        "reference": "Device/25272433"
+      }
+    }
+  ]
+}

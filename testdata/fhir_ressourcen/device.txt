@@ -1,0 +1,15 @@
+{
+  "resourceType": "Device",
+  "id": "example-device",
+  "identifier": [
+    {
+      "system": "http://example.org/devices",
+      "value": "12345"
+    }
+  ],
+  "type": {
+    "text": "Blutdruckmessgerät"
+  },
+  "manufacturer": "HerstellerXYZ",
+  "model": "Modell123"
+}
