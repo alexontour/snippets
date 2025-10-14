@@ -1,7 +1,12 @@
+###
 import json
 import requests
 from collections import OrderedDict
 from io import StringIO
 
-# Optional zur Darstellung einer Web-Seite
-from IPython.display import IFrame
+
+
+# Base URL zum FHIR-Server
+url = "https://hapi.ehealth-solutions.at/fhir/"
+# Header definieren
+headers = {"Content-Type": "application/fhir+json;charset=utf-8"}
