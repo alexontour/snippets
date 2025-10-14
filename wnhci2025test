@@ -10,3 +10,30 @@ from io import StringIO
 url = "https://hapi.ehealth-solutions.at/fhir/"
 # Header definieren
 headers = {"Content-Type": "application/fhir+json;charset=utf-8"}
+
+
+patient = json.loads("""{
+   "resourceType":"Patient",
+   "name":[
+      {
+         "given": "Alex",
+         "family": "KO",
+         "text":"FHWN HCI2025",
+         "use": "official"
+      }
+   ],
+   "gender":"male",
+   "birthDate":"2012-12-12"
+}""")
+
+# FHIR Ressource an FHIR-Server senden (POST)
+response = requests.request("POST", url + "Patient", headers=headers, data=str(patient))
+
+# Ergebnis (Response) verarbeiten
+patient_id = json.loads(response.text)['id']
+patient_name = json.loads(response.text)['name']
+#response.json()
+
+print("Patient-Name: "+ str(patient_name))
+print("Patient-ID: " + patient_id)
+#print(patient_name[0]['given'])
